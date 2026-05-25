@@ -1,0 +1,38 @@
+{
+  "version": "1",
+  "generated_at": "2026-05-25T12:00:00.000Z",
+  "experimental": true,
+  "world_state": {
+    "version": 42,
+    "last_updated": "2026-05-25T11:58:00.000Z",
+    "top_level_keys": ["market", "news", "system"],
+    "sample": [
+      {
+        "key": "spfd:last-run",
+        "domain": "system",
+        "subject": "GLOBAL",
+        "updated_at": "2026-05-25T11:58:00.000Z",
+        "ok": true
+      },
+      {
+        "key": "chorus:participants",
+        "domain": "system",
+        "subject": "GLOBAL",
+        "updated_at": "2026-05-25T11:30:00.000Z",
+        "ok": true
+      },
+      {
+        "key": "market:btc-usd",
+        "domain": "market",
+        "subject": "BTC",
+        "updated_at": "2026-05-25T11:00:00.000Z",
+        "ok": true
+      }
+    ]
+  },
+  "meta": {
+    "site": "luiscore.com",
+    "license": "see /CITATION.cff",
+    "note": "Experimental devnet metrics. Replace with live GET /api/world-state for operational snapshot."
+  }
+}
