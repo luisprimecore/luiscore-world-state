@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://luiscore.com/schemas/world-state.json",
+  "title": "LuisCore World-State API Summary",
+  "description": "Experimental public world-state summary from GET /api/world-state.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "generated_at", "experimental", "world_state", "meta"],
+  "properties": {
+    "version": { "const": "1" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "experimental": { "const": true },
+    "world_state": {
+      "type": "object",
+      "required": ["version", "last_updated", "top_level_keys", "sample"],
+      "properties": {
+        "version": { "type": "integer", "minimum": 0 },
+        "last_updated": { "type": "string", "format": "date-time" },
+        "top_level_keys": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "sample": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["key", "domain", "subject", "updated_at", "ok"],
+            "properties": {
+              "key": { "type": "string" },
+              "domain": { "type": "string" },
+              "subject": { "type": "string" },
+              "updated_at": { "type": "string", "format": "date-time" },
+              "ok": { "type": "boolean" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "meta": {
+      "type": "object",
+      "required": ["site", "license"],
+      "properties": {
+        "site": { "type": "string" },
+        "license": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  }
+}
