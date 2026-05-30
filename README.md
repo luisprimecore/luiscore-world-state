@@ -2,6 +2,10 @@
 
 What this is: **public, machine-readable world-state memory artifacts** for LuisCore experimental recursive cognition infrastructure — the envelope schema and a sample snapshot aligned with the operational read API at [luiscore.com](https://luiscore.com).
 
+## Get an API key
+
+Free LuisCore read API access (status, telemetry, ontology, agents): [https://luiscore.com/developers#signup](https://luiscore.com/developers#signup) — approval typically within 24 hours.
+
 Live API: `GET https://luiscore.com/api/world-state`
 
 Files:
